@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{4FDE1D05-56B9-75EE-4635-899704202DE0}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="app\user\http_post.c" />
+    <ClCompile Include="app\user\tcpClient.c" />
+    <ClCompile Include="app\user\uart.c" />
+    <ClCompile Include="app\user\user_key.c" />
+    <ClCompile Include="app\user\user_main.c" />
+    <ClCompile Include="app\user\user_mqtt.c" />
+    <ClCompile Include="app\user\user_set.c" />
+    <ClCompile Include="app\user\user_time.c" />
+    <ClCompile Include="app\user\user_upgrade.c" />
+    <ClCompile Include="app\user\V9881.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="app\include\at_custom.h" />
+    <ClInclude Include="app\include\debug.h" />
+    <ClInclude Include="app\include\http_post.h" />
+    <ClInclude Include="app\include\key.h" />
+    <ClInclude Include="app\include\mqtt.h" />
+    <ClInclude Include="app\include\mqtt_msg.h" />
+    <ClInclude Include="app\include\proto.h" />
+    <ClInclude Include="app\include\queue.h" />
+    <ClInclude Include="app\include\ringbuf.h" />
+    <ClInclude Include="app\include\tcpclient.h" />
+    <ClInclude Include="app\include\typedef.h" />
+    <ClInclude Include="app\include\uart.h" />
+    <ClInclude Include="app\include\uart_register.h" />
+    <ClInclude Include="app\include\user_config.h" />
+    <ClInclude Include="app\include\user_devicefind.h" />
+    <ClInclude Include="app\include\user_esp_platform.h" />
+    <ClInclude Include="app\include\user_esp_platform_timer.h" />
+    <ClInclude Include="app\include\user_iot_version.h" />
+    <ClInclude Include="app\include\user_json.h" />
+    <ClInclude Include="app\include\user_key.h" />
+    <ClInclude Include="app\include\user_light.h" />
+    <ClInclude Include="app\include\user_light_adj.h" />
+    <ClInclude Include="app\include\user_mqtt.h" />
+    <ClInclude Include="app\include\user_plug.h" />
+    <ClInclude Include="app\include\user_sensor.h" />
+    <ClInclude Include="app\include\user_set.h" />
+    <ClInclude Include="app\include\user_webserver.h" />
+    <ClInclude Include="app\include\utils.h" />
+    <ClInclude Include="app\include\V9881.h" />
+    <ClInclude Include="app\user\gpio16.h" />
+    <ClInclude Include="app\user\user_time.h" />
+    <ClInclude Include="app\user\user_upgrade.h" />
+    <ClInclude Include="include\airkiss.h" />
+    <ClInclude Include="include\at_custom.h" />
+    <ClInclude Include="include\c_types.h" />
+    <ClInclude Include="include\eagle_soc.h" />
+    <ClInclude Include="include\espconn.h" />
+    <ClInclude Include="include\espnow.h" />
+    <ClInclude Include="include\ets_sys.h" />
+    <ClInclude Include="include\gpio.h" />
+    <ClInclude Include="include\ip_addr.h" />
+    <ClInclude Include="include\json\json.h" />
+    <ClInclude Include="include\json\jsonparse.h" />
+    <ClInclude Include="include\json\jsontree.h" />
+    <ClInclude Include="include\mem.h" />
+    <ClInclude Include="include\mesh.h" />
+    <ClInclude Include="include\osapi.h" />
+    <ClInclude Include="include\os_type.h" />
+    <ClInclude Include="include\ping.h" />
+    <ClInclude Include="include\pwm.h" />
+    <ClInclude Include="include\queue.h" />
+    <ClInclude Include="include\simple_pair.h" />
+    <ClInclude Include="include\smartconfig.h" />
+    <ClInclude Include="include\sntp.h" />
+    <ClInclude Include="include\spi_flash.h" />
+    <ClInclude Include="include\upgrade.h" />
+    <ClInclude Include="include\user_interface.h" />
+    <ClInclude Include="include\wpa2_enterprise.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\at\1024+1024\user1.2048.new.5.bin" />
+    <None Include="bin\at\1024+1024\user2.2048.new.5.bin" />
+    <None Include="bin\at\512+512\user1.1024.new.2.bin" />
+    <None Include="bin\at\512+512\user2.1024.new.2.bin" />
+    <None Include="bin\at\noboot\eagle.flash.bin" />
+    <None Include="bin\at\noboot\eagle.irom0text.bin" />
+    <None Include="bin\at_sdio\1024+1024\user1.2048.new.5.bin" />
+    <None Include="bin\at_sdio\1024+1024\user2.2048.new.5.bin" />
+    <None Include="bin\at_sdio\512+512\user1.1024.new.2.bin" />
+    <None Include="bin\at_sdio\512+512\user2.1024.new.2.bin" />
+    <None Include="bin\at_sdio\noboot\eagle.flash.bin" />
+    <None Include="bin\at_sdio\noboot\eagle.irom0text.bin" />
+    <None Include="bin\blank.bin" />
+    <None Include="bin\boot_v1.2.bin" />
+    <None Include="bin\boot_v1.6.bin" />
+    <None Include="bin\eagle.flash.bin" />
+    <None Include="bin\eagle.irom0text.bin" />
+    <None Include="bin\esp_init_data_default.bin" />
+    <None Include="bin\upgrade\user1.1024.new.2.bin" />
+    <None Include="bin\upgrade\user2.1024.new.2.bin" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
