@@ -349,8 +349,9 @@ void user_init(void)
 {
 	u8 temp[32];
 
-	gpio16_output_conf();
-	gpio16_output_set(1);
+	//gpio16_output_conf();
+	//gpio16_output_set(1);
+
 	PIN_FUNC_SELECT(PERIPHS_IO_MUX_MTCK_U , FUNC_GPIO13);
 	PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO0_U , FUNC_GPIO0);
 
